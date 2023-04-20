@@ -1,12 +1,8 @@
-import Test from '@/common/components/test';
-import AudioPlayer from '@/common/components/player/AudioPlayer';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router/router';
+
 function App() {
-  return (
-    <div className="App">
-      <Test />
-      <AudioPlayer />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
