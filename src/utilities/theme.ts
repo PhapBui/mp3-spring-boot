@@ -133,4 +133,39 @@ export let theme = createTheme({
   },
 });
 
+export let cssVariables = {
+  width: {
+    sidebar: '240px',
+    playlist: '330px',
+  },
+  height: {
+    player: '90px',
+  },
+  padding: {
+    paddingSection: '59px',
+  },
+  color: {
+    backgroundTooltip: '#e8e8e8',
+    white: '#fff',
+    black: '#32323d',
+    yellow: '#f8e71c',
+    blue: '#4a90e2',
+    green: '#50e3c2',
+    red: '#e35050',
+    gray: '#dbdbdb',
+    darkAlpha10: 'rgba(0,0,0,0.1)',
+    darkAlpha50: 'rgba(0,0,0,0.5)',
+    darkAlpha70: 'rgba(0,0,0,0.7)',
+    darkAlpha80: 'rgba(0,0,0,0.8)',
+    hoverTooltipOpacity: 'hsla(0,0%,100%,0.3)',
+  },
+  border: {
+    color: {
+      primary: 'hsla(0,0%,100%,0.1)',
+      secondary: ' hsla(0,0%,100%,0.05)',
+    },
+  },
+  backgroundUrl: {},
+};
+
 theme = responsiveFontSizes(theme);

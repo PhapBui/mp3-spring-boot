@@ -10,8 +10,11 @@
   overflow: hidden;
 }
 
+.text * {
+  margin: 0;
+}
 .text {
-  margin: 8px;
+  margin: 0 8px;
 }
 
 .title {
@@ -30,9 +33,3 @@
   display: flex;
   margin: 0 16px;
 }
-
-/* .like {
-}
-
-.more-action {
-} */
