@@ -1,0 +1,19 @@
+.ui-control-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.volume {
+  display: flex;
+  align-items: center;
+}
+.volume input {
+  height: 4px;
+}
+.ui-divider {
+  border-left: 1px solid #000;
+  margin: 0 16px;
+  height: 16px;
+  width: 1px;
+}

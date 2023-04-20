@@ -1,0 +1,22 @@
+.control-btn {
+  transition: all 250ms ease-in-out;
+  border: none;
+  background: unset;
+}
+
+.control-btn:active {
+  background-color: rgb(123, 221, 123);
+  box-shadow: 0 0 4px 6px rgb(123, 221, 123);
+}
+
+button.control-btn svg {
+  font-size: 20px;
+}
+button.control-btn.toggle-play svg {
+  padding: 4px;
+  font-size: 28px;
+}
+.control-btn.random.active svg,
+.control-btn.repeat.active svg {
+  color: aquamarine;
+}

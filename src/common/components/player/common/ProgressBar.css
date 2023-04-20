@@ -1,0 +1,12 @@
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+
+.progress input[type="range"] {
+  flex: 1;
+  height: 4px;
+}

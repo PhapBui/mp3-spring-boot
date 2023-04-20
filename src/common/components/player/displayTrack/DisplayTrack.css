@@ -1,0 +1,38 @@
+.audio-info {
+  display: flex;
+  align-items: center;
+}
+
+.cover {
+  height: 100%;
+  width: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.text {
+  margin: 8px;
+}
+
+.title {
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.author {
+  color: #ccc;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.user-reaction {
+  display: flex;
+  margin: 0 16px;
+}
+
+/* .like {
+}
+
+.more-action {
+} */
