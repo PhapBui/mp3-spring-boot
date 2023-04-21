@@ -8,7 +8,7 @@ export const HeaderWrapper = styled('header')(({ theme }) => ({
   left: cssVariables.width.sidebar,
   top: '0',
   right: '0',
-  height: '70px',
+  height: cssVariables.height.header,
   padding: `0 ${cssVariables.padding.paddingSection}`,
   zIndex: '99',
   minWidth: '660px',

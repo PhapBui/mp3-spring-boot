@@ -5,7 +5,7 @@ export const MainLayoutWrapper = styled('div')(({ theme }) => ({
   display: 'flex',
   width: '100%',
   minWidth: '768px',
-  backgroundColor: 'var(--layout-bg)',
+  backgroundColor: cssVariables.color.layoutbg,
   height: `calc(100vh - ${cssVariables.height.player})`,
 }));
 

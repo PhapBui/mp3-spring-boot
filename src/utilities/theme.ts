@@ -19,6 +19,11 @@ export let theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
+        '*': {
+          margin: 0,
+          padding: 0,
+          boxSizing: 'border-box',
+        },
         html: {
           scrollBehavior: 'smooth',
           '& *::-webkit-scrollbar': {
@@ -38,83 +43,16 @@ export let theme = createTheme({
           textDecoration: 'none',
           color: 'inherit',
         },
-      },
-    },
-    MuiContainer: {
-      defaultProps: {
-        maxWidth: 'xl',
-      },
-      styleOverrides: {
-        maxWidthSm: {
-          maxWidth: 680,
-          '@media (min-width: 600px)': {
-            maxWidth: 680,
-          },
+        'ul,li,ol': {
+          listStyle: 'none',
         },
-        maxWidthMd: {
-          maxWidth: 860,
-          '@media (min-width: 900px)': {
-            maxWidth: 860,
-          },
-        },
-        maxWidthLg: {
-          maxWidth: 1280,
-          '@media (min-width: 1200px)': {
-            maxWidth: 1280,
-          },
-        },
-        maxWidthXl: {
-          maxWidth: 1440,
-          '@media (min-width: 1441px)': {
-            maxWidth: 1440,
-          },
-        },
-      },
-    },
-    MuiLink: {
-      defaultProps: {
-        underline: 'hover',
-      },
-      styleOverrides: {
-        root: {
-          color: 'black',
-          '&:hover ,&.active': {
-            color: '#FF6464',
-          },
-        },
-      },
-    },
-    MuiButton: {
-      variants: [
-        {
-          props: { variant: 'contained', color: 'primary' },
-          style: {
-            color: 'white',
-          },
-        },
-      ],
-    },
-    MuiChip: {
-      styleOverrides: {
-        root: {
-          paddingInline: 1,
-          '&:hover': { cursor: 'pointer' },
-        },
-      },
-      variants: [
-        {
-          props: { color: 'secondary' },
-          style: {
-            color: 'white',
-            backgroundColor: '#142840',
-          },
-        },
-      ],
-    },
-    MuiTableCell: {
-      styleOverrides: {
-        root: {
-          padding: 8,
+        'button,input,optgroup,select,textarea': {
+          padding: '0',
+          border: 'none',
+          font: 'inherit',
+          color: 'inherit',
+          backgroundColor: 'transparent',
+          wordBreak: 'normal',
         },
       },
     },
@@ -129,7 +67,7 @@ export let theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Heebo, sans-serif',
+    fontFamily: 'Inter, sans-serif',
   },
 });
 
@@ -137,15 +75,43 @@ export let cssVariables = {
   width: {
     sidebar: '240px',
     playlist: '330px',
+    logo: '120px',
   },
   height: {
     player: '90px',
+    header: '70px',
+    addToPlaylist: '54px',
+    logo: '40px',
   },
   padding: {
     paddingSection: '59px',
   },
   color: {
     backgroundTooltip: '#e8e8e8',
+    layoutbg: '#170f23',
+    layoutHeaderBg: 'rgba(23,15,35,0.8)',
+
+    playerBg: '#130c1c',
+    sidebarBg: '#2a213a',
+    primaryBg: '#34224f',
+    alphaBg: 'hsla(0,0%,100%,0.1)',
+
+    gradientLatestSectionArtist:
+      'linear-gradient(286.07deg,rgba(23,15,35,0.95) 55.21%,rgba(23,15,35,0.6))',
+    alphaLayoutBg: 'rgba(41,21,71,0.8)',
+    queuePlayerPopupBg: '#120822',
+    blurQueueBg: 'rgba(30,21,47,0.9019607843137255)',
+    purplePrimary: '#9b4de0',
+    linkTextHover: '#c273ed',
+    chartBgImgAlpha: 'rgba(32,19,53,0.9)',
+
+    textNavigation: '#dadada',
+    textPlaceholder: '#dadada',
+    textPrimary: '#fff',
+    textSearch: '#eee',
+    textPlayer: '#fff',
+    textItemHover: '#fff',
+
     white: '#fff',
     black: '#32323d',
     yellow: '#f8e71c',
