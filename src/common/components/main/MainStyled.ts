@@ -7,6 +7,7 @@ export const MainWrapper = styled('main')(({ theme }) => ({
   width: 'calc(100% - 570px)',
   minHeight: '100%',
   transition: 'margin-right .4s',
+  marginTop: cssVariables.height.header,
   '&.collapsed': {
     marginRight: cssVariables.width.playlist,
   },

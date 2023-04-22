@@ -54,6 +54,11 @@ export let theme = createTheme({
           backgroundColor: 'transparent',
           wordBreak: 'normal',
         },
+        span: {
+          fontSize: '14px',
+          lineHeight: 'normal',
+          fontWeight: 'inherit',
+        },
       },
     },
   },
@@ -108,6 +113,7 @@ export let cssVariables = {
     textNavigation: '#dadada',
     textPlaceholder: '#dadada',
     textPrimary: '#fff',
+    textSecondary: ' hsla(0,0%,100%,0.5)',
     textSearch: '#eee',
     textPlayer: '#fff',
     textItemHover: '#fff',
@@ -131,7 +137,9 @@ export let cssVariables = {
       secondary: ' hsla(0,0%,100%,0.05)',
     },
   },
-  backgroundUrl: {},
+  iconSize: {
+    normal: '20px',
+  },
 };
 
 theme = responsiveFontSizes(theme);

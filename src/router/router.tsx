@@ -13,8 +13,8 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: 'about',
-    element: <EmptyLayout />,
+    path: 'kham-pha',
+    element: <MainLayout />,
     children: [{ path: 'hide', element: <Hide /> }],
   },
 ]);

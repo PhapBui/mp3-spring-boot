@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { HeaderInner, HeaderWrapper } from './HeaderStyle';
-import HeaderLeft from './components/HeaderLeft';
-import HeaderRight from './components/HeaderRight';
+import HeaderLeft from './components/left/HeaderLeft';
+import HeaderRight from './components/right/HeaderRight';
 
 interface HeaderProps {}
 
