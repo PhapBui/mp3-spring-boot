@@ -59,6 +59,19 @@ export let theme = createTheme({
           lineHeight: 'normal',
           fontWeight: 'inherit',
         },
+        '.flex': {
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        },
+        '.flex-item': {
+          alignItems: 'center',
+          display: 'flex',
+          flexBasis: 'auto',
+          flexGrow: '0',
+          flexShrink: '0',
+          justifyContent: 'center',
+        },
       },
     },
   },
@@ -100,6 +113,7 @@ export let cssVariables = {
     sidebarBg: '#2a213a',
     primaryBg: '#34224f',
     alphaBg: 'hsla(0,0%,100%,0.1)',
+    tabActiveBg: 'hsla(0,0%,100%,0.3)',
 
     gradientLatestSectionArtist:
       'linear-gradient(286.07deg,rgba(23,15,35,0.95) 55.21%,rgba(23,15,35,0.6))',
@@ -130,6 +144,8 @@ export let cssVariables = {
     darkAlpha70: 'rgba(0,0,0,0.7)',
     darkAlpha80: 'rgba(0,0,0,0.8)',
     hoverTooltipOpacity: 'hsla(0,0%,100%,0.3)',
+
+    stickyHeaderBoxShadow: 'rgba(0,0,0,0.1)',
   },
   border: {
     color: {
@@ -137,8 +153,12 @@ export let cssVariables = {
       secondary: ' hsla(0,0%,100%,0.05)',
     },
   },
+  margin: {
+    topSection: '48px',
+  },
   iconSize: {
     normal: '20px',
+    player: '45px',
   },
 };
 

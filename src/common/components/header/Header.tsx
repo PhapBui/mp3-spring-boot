@@ -3,11 +3,13 @@ import { HeaderInner, HeaderWrapper } from './HeaderStyle';
 import HeaderLeft from './components/left/HeaderLeft';
 import HeaderRight from './components/right/HeaderRight';
 
-interface HeaderProps {}
+interface HeaderProps {
+  isSticky: Boolean;
+}
 
-const Header: React.FunctionComponent<HeaderProps> = (props) => {
+const Header: React.FunctionComponent<HeaderProps> = ({ isSticky }: HeaderProps) => {
   return (
-    <HeaderWrapper className="collapsed">
+    <HeaderWrapper className={`${isSticky ? 'is-sticky' : ''} collapsed`}>
       <HeaderInner>
         <HeaderLeft />
         <HeaderRight />

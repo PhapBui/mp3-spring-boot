@@ -1,15 +1,15 @@
-import { EmptyLayout, MainLayout } from '@/common/layouts';
-import DashBoard from '@/pages/dashboard';
+import { MainLayout } from '@/common/layouts';
+import { HomePage } from '@/pages';
 import Hide from '@/pages/hideparent';
 import { createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
     path: '',
-    element: <MainLayout />,
+    element: <MainLayout />, //layout
     children: [
-      { element: <DashBoard />, index: true },
-      { path: 'hide', element: <Hide /> },
+      { element: <HomePage />, index: true }, //page render khi vao path cua parent
+      { path: 'hide', element: <Hide /> }, //xai cung layout :))
     ],
   },
   {

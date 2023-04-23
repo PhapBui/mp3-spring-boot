@@ -1,5 +1,4 @@
 import { Action, combineReducers, configureStore, ThunkAction } from '@reduxjs/toolkit';
-import { connectRouter, routerMiddleware } from 'connected-react-router';
 import {
   FLUSH,
   PAUSE,
@@ -14,9 +13,7 @@ import storage from 'redux-persist/lib/storage';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './rootSaga';
 import { history } from '@/utilities/history';
-const rootReducer = combineReducers({
-  router: connectRouter(history),
-});
+const rootReducer = combineReducers({});
 
 //Persist
 const persistConfig = {
@@ -36,7 +33,7 @@ export const store = configureStore({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }).concat(sagaMiddleware, routerMiddleware(history)),
+    }).concat(sagaMiddleware),
 });
 
 sagaMiddleware.run(rootSaga);

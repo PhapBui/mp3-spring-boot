@@ -1,7 +1,7 @@
 import { memo, useState } from 'react';
-import { AiOutlineHeart, AiOutlineMore, AiFillHeart } from 'react-icons/ai';
 import ControlButton from '../common/ControlButton.js';
 import './DisplayTrack.css';
+import { icons } from '@/assets';
 
 const DisplayTrack = ({ currentTrack, audioRef, setDuration, progressBarRef, handleNext }: any) => {
   const [isLiked, setIsLiked] = useState(false);
@@ -44,13 +44,11 @@ const DisplayTrack = ({ currentTrack, audioRef, setDuration, progressBarRef, han
         <div className="user-reaction">
           <div className="like">
             <ControlButton handleOnClick={handleLikeSong}>
-              {isLiked ? <AiFillHeart /> : <AiOutlineHeart />}
+              {isLiked ? icons.liked : icons.like}
             </ControlButton>
           </div>
           <div className="more-action">
-            <ControlButton>
-              <AiOutlineMore />
-            </ControlButton>
+            <ControlButton>{icons.moreV}</ControlButton>
           </div>
         </div>
       </div>

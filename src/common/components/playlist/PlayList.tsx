@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { PlayListWrapper } from './PlayListStyled';
 
-interface PlayerBarProps {}
+interface PlayListProps {}
 
-const PlayerBar: React.FunctionComponent<PlayerBarProps> = (props) => {
-  return <PlayListWrapper></PlayListWrapper>;
+const PlayList: React.FunctionComponent<PlayListProps> = (props) => {
+  return <PlayListWrapper className="playlist"></PlayListWrapper>;
 };
 
-export default PlayerBar;
+export default PlayList;

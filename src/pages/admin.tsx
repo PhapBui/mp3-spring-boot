@@ -10,8 +10,6 @@ const Admin: React.FunctionComponent<AdminProps> = ({ children }) => {
     <>
       <h2>Admin</h2>
       <Outlet />
-      <h4>cac</h4>
-      <Outlet />
     </>
   );
 };

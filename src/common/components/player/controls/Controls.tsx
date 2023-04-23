@@ -1,20 +1,10 @@
-import { useState, useEffect, useRef, useCallback, memo } from 'react';
-
-// icons
-import {
-  IoPlayBackSharp,
-  IoPlayForwardSharp,
-  IoPlaySkipBackSharp,
-  IoPlaySkipForwardSharp,
-} from 'react-icons/io5';
-import { FaRandom } from 'react-icons/fa';
-import { FiRepeat } from 'react-icons/fi';
-import { BsPauseCircle, BsPlayCircle } from 'react-icons/bs';
+import { memo, useCallback, useEffect, useRef, useState } from 'react';
 
 import ControlButton from '../common/ControlButton.js';
 
-import './Controls.css';
+import { icons } from '@/assets/index.js';
 import ProgressBar from '../common/ProgressBar';
+import './Controls.css';
 
 const Controls = ({
   audioRef,
@@ -91,34 +81,34 @@ const Controls = ({
           handleOnClick={handleRandomBtn}
           classes={random ? 'random active' : 'random'}
         >
-          <FaRandom />
+          {icons.random}
         </ControlButton>
 
         <ControlButton handleOnClick={handlePreviousSong} classes={'previous'}>
-          <IoPlaySkipBackSharp />
+          {icons.previous}
         </ControlButton>
 
         <ControlButton handleOnClick={skipBackward} classes={'backward'}>
-          <IoPlayBackSharp />
+          {icons.skipBackward}
         </ControlButton>
 
         <ControlButton handleOnClick={togglePlayPause} classes={'toggle-play'}>
-          {isPlaying ? <BsPauseCircle /> : <BsPlayCircle />}
+          {isPlaying ? icons.pause : icons.play}
         </ControlButton>
 
         <ControlButton handleOnClick={skipForward} classes={'forward'}>
-          <IoPlayForwardSharp />
+          {icons.skipForward}
         </ControlButton>
 
         <ControlButton handleOnClick={handleNextSong} classes={'next'}>
-          <IoPlaySkipForwardSharp />
+          {icons.next}
         </ControlButton>
 
         <ControlButton
           handleOnClick={handleRepeatBtn}
           classes={repeatPlay ? 'repeat active' : 'repeat'}
         >
-          <FiRepeat />
+          {icons.repeat}
         </ControlButton>
       </div>
       <ProgressBar {...{ progressBarRef, audioRef, timeProgress, duration }} />
