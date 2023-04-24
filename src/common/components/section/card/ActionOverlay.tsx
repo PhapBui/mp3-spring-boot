@@ -12,11 +12,11 @@ const ActionOverlay: React.FunctionComponent<IActionOverlayProps> = (props) => {
   };
 
   return (
-    <ActionOverlayWrapper>
+    <ActionOverlayWrapper className="overlay">
       <ActionOverlayInner>
         <button title="Thêm vào thư viện">{icons.like}</button>
         <button title="Play" onClick={togglePlay}>
-          {isPlay ? icons.play : <PlayGift />}
+          {isPlay ? <PlayGift /> : icons.play}
         </button>
         <button title="Khác">{icons.moreH}</button>
       </ActionOverlayInner>

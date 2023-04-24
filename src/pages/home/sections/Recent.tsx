@@ -1,16 +1,8 @@
-import { Stack } from '@mui/material';
 import * as React from 'react';
-import { SectionInner, SectionWrapper } from './SectionStyled';
-import SectionItem from './item/SectionItem';
-import SectionHeader from './section-header/SectionHeader';
-
-interface ISectionProps {
-  title: string;
-  readmore?: string;
-  children: React.ReactNode;
-}
-
-//delete
+import Section from '@/common/components/section/Section';
+import { Stack } from '@mui/material';
+import SectionItem from '@/common/components/section/item/SectionItem';
+interface IRecentProps {}
 const data = [
   {
     id: 1,
@@ -61,30 +53,17 @@ const data = [
     author: ['Khong', ' Kho'],
   },
 ];
-/*
-interface section{
-  data:{
-    title:string,
-    sub-title,
-    icon:string,
-    link:string,
-    itemRender:number,
-    items: item[],
-
-  }
-}
-*/
-const Section: React.FunctionComponent<ISectionProps> = ({
-  title,
-  readmore,
-  children,
-}: ISectionProps) => {
+const Recent: React.FunctionComponent<IRecentProps> = (props) => {
+  const newData = data.slice(0, 6);
   return (
-    <SectionWrapper>
-      <SectionHeader data={{ title, readmore }} />
-      <SectionInner>{children}</SectionInner>
-    </SectionWrapper>
+    <Section title={'Gần đây'}>
+      <Stack direction="row" sx={{ overflow: 'hidden', margin: '0 -14px' }}>
+        {newData.map((item, i) => {
+          return <SectionItem key={item.id} data={item} numberColumn={6} />;
+        })}
+      </Stack>
+    </Section>
   );
 };
 
-export default Section;
+export default Recent;

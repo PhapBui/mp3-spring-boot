@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { MainContent, MainOverlay } from './HomePageStyled';
-import Section from '@/common/components/section/Section';
 import Slick from '@/common/components/carousel/Slick';
+import Recent from './sections/Recent';
+import NewRelease from './sections/NewRelease';
 
 interface IHomePageProps {}
 
@@ -32,11 +33,17 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
             <img src={item.url} alt="" key={item.url} />
           ))}
         </Slick>
-        <Section numberChildDisplay={7} />
-        <Section numberChildDisplay={5} />
-        <Section numberChildDisplay={5} />
-        <Section numberChildDisplay={5} />
-        <Section numberChildDisplay={5} />
+        <Recent />
+        <NewRelease />
+        <Recent />
+        <Recent />
+        <Slick setting={setting}>
+          {data.map((item) => (
+            <img src={item.url} alt="" key={item.url} />
+          ))}
+        </Slick>
+        <Recent />
+        <Recent />
       </MainContent>
       <MainOverlay />
     </>

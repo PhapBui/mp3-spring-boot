@@ -24,7 +24,7 @@ const PlayerQueue: React.FunctionComponent<PlayerQueueProps> = (props) => {
   };
 
   return (
-    <PlayerQueueWrapper>
+    <PlayerQueueWrapper className="queue">
       <PlayerQueueContainer>
         <PlayerQueueHeader>
           <TabBar className="flex">

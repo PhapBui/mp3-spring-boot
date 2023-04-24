@@ -9,6 +9,9 @@ export const ActionOverlayWrapper = styled('div')({
   bottom: '0',
   right: '0',
   backgroundColor: cssVariables.color.darkAlpha50,
+  transition: 'all linear 0.3s',
+  visibility: 'hidden',
+  opacity: '0',
 });
 
 export const ActionOverlayInner = styled(Stack)({

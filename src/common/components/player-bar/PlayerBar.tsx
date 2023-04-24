@@ -3,6 +3,7 @@ import { PlayerBarWrapper } from './PlayerBarStyled';
 import Control from './components/control/Control';
 import PlayerQueue from './components/queue/PlayerQueue';
 import AudioPlayer from '@/common/components/player/AudioPlayer';
+import PlayList from '@/common/components/playlist/PlayList';
 
 interface PlayerBarProps {}
 
@@ -12,7 +13,7 @@ const PlayerBar: React.FunctionComponent<PlayerBarProps> = (props) => {
       <Control>
         <AudioPlayer />
       </Control>
-      <PlayerQueue></PlayerQueue>
+      <PlayerQueue />
     </PlayerBarWrapper>
   );
 };

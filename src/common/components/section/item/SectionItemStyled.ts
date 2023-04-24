@@ -1,6 +1,5 @@
 import { cssVariables } from '@/utilities/theme';
 import { styled } from '@mui/material';
-import { Link } from 'react-router-dom';
 
 export const ItemWrapper = styled('div')({
   position: 'relative',
@@ -30,6 +29,10 @@ export const Thumbnail = styled('div')({
   },
   '&:hover img': {
     transform: 'scale(1.1) translateZ(0)',
+  },
+  '&:hover .overlay': {
+    visibility: 'visible',
+    opacity: 1,
   },
 });
 export const Content = styled('div')({

@@ -83,5 +83,7 @@ export const UserAction = styled('div')({
 });
 
 export const PlayerQueueBody = styled('div')({
+  position: 'relative',
   flex: '1 1',
+  overflow: 'hidden auto',
 });

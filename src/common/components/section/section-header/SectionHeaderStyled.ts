@@ -1,5 +1,6 @@
 import { cssVariables } from '@/utilities/theme';
 import { styled } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export const SectionHeaderInner = styled('h3')({
   marginBottom: '20px',
@@ -21,4 +22,13 @@ export const ContentRight = styled('div')({
   display: 'flex',
   alignItems: 'center',
   color: cssVariables.color.textSecondary,
+});
+
+export const ReadmoreBtn = styled(Link)({
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  '&>span': {
+    marginRight: 4,
+  },
 });
