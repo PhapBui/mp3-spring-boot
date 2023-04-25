@@ -18,14 +18,14 @@ const mainMenuData = [
   {
     id: 1,
     name: 'Thư viện',
-    path: '',
+    path: 'mymusic',
     icon: <MdLibraryMusic />,
     actionIcons: <BsPlayCircle />,
   },
   {
     id: 2,
     name: 'Khám phá',
-    path: 'kham-pha',
+    path: '',
     icon: <VscTarget />,
   },
   {

@@ -1,16 +1,9 @@
-import { Stack } from '@mui/material';
 import * as React from 'react';
-import { SectionInner, SectionWrapper } from './SectionStyled';
-import SectionItem from './column/Column';
-import SectionHeader from './section-header/SectionHeader';
-
-interface ISectionProps {
-  title: string;
-  readmore?: string;
-  children: React.ReactNode;
-}
-
-//delete
+import Section from '@/common/components/section/Section';
+import { Stack } from '@mui/material';
+import Column from '@/common/components/section/column/Column';
+import Playlist from '@/common/components/playlist/Playlist';
+interface IPlaylistSectionProps {}
 const data = [
   {
     id: 1,
@@ -61,30 +54,21 @@ const data = [
     author: ['Khong', ' Kho'],
   },
 ];
-/*
-interface section{
-  data:{
-    title:string,
-    sub-title,
-    icon:string,
-    link:string,
-    itemRender:number,
-    items: item[],
-
-  }
-}
-*/
-const Section: React.FunctionComponent<ISectionProps> = ({
-  title,
-  readmore,
-  children,
-}: ISectionProps) => {
+const PlaylistSection: React.FunctionComponent<IPlaylistSectionProps> = (props) => {
+  const newData = data.slice(0, 5);
   return (
-    <SectionWrapper>
-      <SectionHeader data={{ title, readmore }} />
-      <SectionInner>{children}</SectionInner>
-    </SectionWrapper>
+    <Section title={'Playlist'}>
+      <Stack direction="row" sx={{ overflow: 'hidden', margin: '0 -14px' }}>
+        {newData.map((item, i) => {
+          return (
+            <Column key={item.id} numberColumn={5}>
+              <Playlist />
+            </Column>
+          );
+        })}
+      </Stack>
+    </Section>
   );
 };
 
-export default Section;
+export default PlaylistSection;

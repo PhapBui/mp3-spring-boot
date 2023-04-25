@@ -1,27 +1,27 @@
 import * as React from 'react';
-import { PlayListWrapper } from './PlayListStyled';
-import ListItem from './components/ListItem';
 
-interface PlayListProps {}
+import { PlaylistThumbnail, PlaylistWrapper } from './PlaylistStyled';
+import Card from '../card';
+import CardInfo from '../card/card-info/CardInfo';
 
-const PlayList: React.FunctionComponent<PlayListProps> = (props) => {
-  const [activeItem, setActiveItem] = React.useState<number>(1);
-  const handleActive = (a: number) => {
-    setActiveItem(a);
+interface IPlaylistProps {}
+
+const Playlist: React.FunctionComponent<IPlaylistProps> = (props) => {
+  const item = {
+    name: 'Be Mine',
+    path: 'be-mine',
+  };
+  const artist = {
+    name: 'Beast',
+    path: 'beast',
   };
 
   return (
-    <PlayListWrapper className="playlist">
-      {[1, 2, 3, 4].map((a) => (
-        <ListItem
-          timeRelease={false}
-          key={a}
-          isActive={activeItem === a}
-          handleChangeSong={() => handleActive(a)}
-        />
-      ))}
-    </PlayListWrapper>
+    <PlaylistWrapper>
+      <Card />
+      <CardInfo {...{ item, artist }} />
+    </PlaylistWrapper>
   );
 };
 
-export default PlayList;
+export default Playlist;

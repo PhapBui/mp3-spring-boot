@@ -35,60 +35,13 @@ export const ListItemContent = styled(Stack)({
   },
 });
 export const ListItemLeft = styled(Stack)({
+  columnGap: 8,
   flexDirection: 'row',
   width: '50%',
   marginRight: '10px',
   flexBasis: 'auto',
   flexGrow: '1',
   flexShrink: '1',
-});
-
-export const SongThumbnail = styled('div')({
-  marginRight: '10px',
-  flexShrink: '0',
-  display: 'block',
-  position: 'relative',
-  overflow: 'hidden',
-  borderRadius: '4px',
-  cursor: 'pointer',
-
-  '& svg, &i': {
-    width: 40,
-    height: 40,
-  },
-  '& img': {
-    width: '100%',
-    height: '100%',
-  },
-});
-export const SongInfo = styled('div')({
-  overflow: 'hidden',
-  display: 'flex',
-  flexDirection: 'column',
-  width: '100%',
-});
-export const SongTitle = styled('h3')({
-  display: 'flex',
-  alignItems: 'center',
-  color: cssVariables.color.white,
-  fontSize: 14,
-});
-export const Artist = styled('h3')({
-  display: 'flex',
-  alignItems: 'center',
-  color: cssVariables.color.textSecondary,
-  fontSize: 12,
-});
-
-export const TimeRelease = styled('div')({
-  display: 'flex',
-  alignItems: 'center',
-  fontSize: '12px',
-  lineHeight: '18px',
-  fontWeight: '400',
-  color: cssVariables.color.textSecondary,
-  marginTop: '3px',
-  whiteSpace: 'nowrap',
 });
 
 export const ListItemRight = styled(Stack)({

@@ -12,7 +12,7 @@ import {
 } from './PlayerQueueStyled';
 import { Typography } from '@mui/material';
 import { icons } from '@/assets';
-import PlayList from '@/common/components/playlist/PlayList';
+import SongList from '@/common/components/songlist/SongList';
 
 interface PlayerQueueProps {}
 
@@ -53,7 +53,7 @@ const PlayerQueue: React.FunctionComponent<PlayerQueueProps> = (props) => {
           </TabBar>
         </PlayerQueueHeader>
         <PlayerQueueBody>
-          <PlayList />
+          <SongList />
         </PlayerQueueBody>
       </PlayerQueueContainer>
     </PlayerQueueWrapper>

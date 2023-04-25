@@ -29,7 +29,7 @@ const icons = {
   like: <AiOutlineHeart size={cssVariables.iconSize.normal} />,
 
   play: <BsPlayCircle size={cssVariables.iconSize.player} />,
-  pause: <BsPauseCircle size={cssVariables.iconSize.normal} />,
+  pause: <BsPauseCircle size={cssVariables.iconSize.player} />,
   skipBackward: <IoPlayBackSharp size={cssVariables.iconSize.normal} />,
   skipForward: <IoPlayForwardSharp size={cssVariables.iconSize.normal} />,
   next: <IoPlaySkipBackSharp size={cssVariables.iconSize.normal} />,

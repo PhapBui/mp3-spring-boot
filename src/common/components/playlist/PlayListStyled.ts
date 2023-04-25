@@ -1,6 +1,7 @@
-import { styled } from '@mui/material';
 import { cssVariables } from '@/utilities/theme';
+import { styled } from '@mui/material';
+import { Link } from 'react-router-dom';
 
-export const PlayListWrapper = styled('div')(({ theme }) => ({
-  padding: '0 8px 15px',
-}));
+export const PlaylistWrapper = styled('div')({});
+
+export const PlaylistThumbnail = styled(Link)({});

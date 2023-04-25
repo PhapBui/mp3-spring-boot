@@ -1,7 +1,8 @@
 import * as React from 'react';
 import Section from '@/common/components/section/Section';
 import { Stack } from '@mui/material';
-import SectionItem from '@/common/components/section/item/SectionItem';
+import Column from '@/common/components/section/column/Column';
+import Playlist from '@/common/components/playlist/Playlist';
 interface IRecentProps {}
 const data = [
   {
@@ -59,7 +60,11 @@ const Recent: React.FunctionComponent<IRecentProps> = (props) => {
     <Section title={'Gần đây'}>
       <Stack direction="row" sx={{ overflow: 'hidden', margin: '0 -14px' }}>
         {newData.map((item, i) => {
-          return <SectionItem key={item.id} data={item} numberColumn={6} />;
+          return (
+            <Column key={item.id} numberColumn={6}>
+              <Playlist />
+            </Column>
+          );
         })}
       </Stack>
     </Section>

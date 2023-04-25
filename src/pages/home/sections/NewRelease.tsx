@@ -1,9 +1,9 @@
 import Section from '@/common/components/section/Section';
 import { Stack } from '@mui/material';
 import * as React from 'react';
-import { ItemWrapper } from '@/common/components/section/item/SectionItemStyled';
-import PlayList from '@/common/components/playlist/PlayList';
 import { ButtonGroup, ButtonInner } from './NewReleaseStyled';
+import Column from '@/common/components/section/column/Column';
+import ListItem from '@/common/components/songlist/components/SongItem';
 
 interface INewReleaseProps {}
 
@@ -14,9 +14,13 @@ const list = [
 ];
 
 const NewRelease: React.FunctionComponent<INewReleaseProps> = (props) => {
+  const [activeItem, setActiveItem] = React.useState<number>(1);
+  const handleActive = (a: number) => {
+    setActiveItem(a);
+  };
   const [activeList, setActiveList] = React.useState<number>(1);
 
-  const handleActive = (a: number) => {
+  const handleActiveList = (a: number) => {
     setActiveList(a);
   };
 
@@ -28,41 +32,33 @@ const NewRelease: React.FunctionComponent<INewReleaseProps> = (props) => {
             <ButtonInner
               key={a.id}
               className={activeList === a.id ? 'active' : ''}
-              onClick={() => handleActive(a.id)}
+              onClick={() => handleActiveList(a.id)}
             >
               {a.name}
             </ButtonInner>
           ))}
         </ButtonGroup>
       </Stack>
-      <Stack direction="row" sx={{ overflow: 'hidden', margin: '0 -14px' }}>
-        <ItemWrapper
-          sx={{
-            flexBasis: `${100 / 3}%`,
-            width: `${100 / 3}%`,
-            maxWidth: `${100 / 3}%`,
-          }}
-        >
-          <PlayList />
-        </ItemWrapper>
-        <ItemWrapper
-          sx={{
-            flexBasis: `${100 / 3}%`,
-            width: `${100 / 3}%`,
-            maxWidth: `${100 / 3}%`,
-          }}
-        >
-          <PlayList />
-        </ItemWrapper>
-        <ItemWrapper
-          sx={{
-            flexBasis: `${100 / 3}%`,
-            width: `${100 / 3}%`,
-            maxWidth: `${100 / 3}%`,
-          }}
-        >
-          <PlayList />
-        </ItemWrapper>
+      <Stack
+        direction="row"
+        sx={{
+          overflow: 'hidden',
+          margin: '0 -14px',
+          flexWrap: 'wrap',
+        }}
+      >
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((a) => {
+          return (
+            <Column key={a} numberColumn={3}>
+              <ListItem
+                timeRelease={false}
+                key={a}
+                isActive={activeItem === a}
+                handleChangeSong={() => handleActive(a)}
+              />
+            </Column>
+          );
+        })}
       </Stack>
     </Section>
   );

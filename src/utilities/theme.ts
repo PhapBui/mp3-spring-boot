@@ -72,6 +72,10 @@ export let theme = createTheme({
           flexShrink: '0',
           justifyContent: 'center',
         },
+        'img,video': {
+          height: 'auto',
+          width: '100%',
+        },
       },
     },
   },
@@ -114,6 +118,7 @@ export let cssVariables = {
     primaryBg: '#34224f',
     alphaBg: 'hsla(0,0%,100%,0.1)',
     tabActiveBg: 'hsla(0,0%,100%,0.3)',
+    loadingBg: 'hsla(0,0%,100%,0.1)',
 
     gradientLatestSectionArtist:
       'linear-gradient(286.07deg,rgba(23,15,35,0.95) 55.21%,rgba(23,15,35,0.6))',

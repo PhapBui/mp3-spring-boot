@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { MainContent, MainOverlay } from './HomePageStyled';
+import { MainContent } from './HomePageStyled';
 import Slick from '@/common/components/carousel/Slick';
 import Recent from './sections/Recent';
 import NewRelease from './sections/NewRelease';
@@ -45,7 +45,6 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
         <Recent />
         <Recent />
       </MainContent>
-      <MainOverlay />
     </>
   );
 };
