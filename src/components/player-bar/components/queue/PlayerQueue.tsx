@@ -12,7 +12,7 @@ import {
 } from './PlayerQueueStyled';
 import { Typography } from '@mui/material';
 import { icons } from '@/assets';
-import SongList from '@/common/components/songlist/SongList';
+import SongList from '@/components/songlist/SongList';
 
 interface PlayerQueueProps {}
 

@@ -53,6 +53,7 @@ export let theme = createTheme({
           color: 'inherit',
           backgroundColor: 'transparent',
           wordBreak: 'normal',
+          lineHeight: 0.6,
         },
         span: {
           fontSize: '14px',
@@ -119,6 +120,7 @@ export let cssVariables = {
     alphaBg: 'hsla(0,0%,100%,0.1)',
     tabActiveBg: 'hsla(0,0%,100%,0.3)',
     loadingBg: 'hsla(0,0%,100%,0.1)',
+    selectBg: 'hsla(0,0%,100%,0.15)',
 
     gradientLatestSectionArtist:
       'linear-gradient(286.07deg,rgba(23,15,35,0.95) 55.21%,rgba(23,15,35,0.6))',
@@ -136,6 +138,8 @@ export let cssVariables = {
     textSearch: '#eee',
     textPlayer: '#fff',
     textItemHover: '#fff',
+
+    songItemAction: 'hsla(0,0%,100%,0.5)',
 
     white: '#fff',
     black: '#32323d',
@@ -162,6 +166,7 @@ export let cssVariables = {
     topSection: '48px',
   },
   iconSize: {
+    small: '14px',
     normal: '20px',
     player: '45px',
   },

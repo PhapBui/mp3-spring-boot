@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Section from '@/common/components/section/Section';
+import Section from '@/components/section/Section';
 import { Stack } from '@mui/material';
-import Column from '@/common/components/section/column/Column';
-import Playlist from '@/common/components/playlist/Playlist';
+import Column from '@/components/section/column/Column';
+import Playlist from '@/components/playlist/Playlist';
 interface IPlaylistSectionProps {}
 const data = [
   {

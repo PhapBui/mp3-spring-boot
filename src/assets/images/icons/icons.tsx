@@ -15,6 +15,8 @@ import { AiOutlineHeart, AiOutlineMore, AiFillHeart } from 'react-icons/ai';
 import { BsPauseCircle, BsPlayCircle } from 'react-icons/bs';
 import { FaRandom } from 'react-icons/fa';
 import { FiRepeat } from 'react-icons/fi';
+import { SlMusicToneAlt } from 'react-icons/sl';
+import { BiCheckbox, BiCheckboxChecked } from 'react-icons/bi';
 
 const icons = {
   desktopDownload: <VscDesktopDownload size={cssVariables.iconSize.normal} />,
@@ -27,6 +29,10 @@ const icons = {
   moreV: <AiOutlineMore size={cssVariables.iconSize.normal} />,
   liked: <AiFillHeart size={cssVariables.iconSize.normal} />,
   like: <AiOutlineHeart size={cssVariables.iconSize.normal} />,
+
+  music: <SlMusicToneAlt size={cssVariables.iconSize.small} />,
+  checkBox: <BiCheckbox size={cssVariables.iconSize.small} />,
+  checkedBox: <BiCheckboxChecked size={cssVariables.iconSize.small} />,
 
   play: <BsPlayCircle size={cssVariables.iconSize.player} />,
   pause: <BsPauseCircle size={cssVariables.iconSize.player} />,

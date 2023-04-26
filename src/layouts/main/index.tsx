@@ -1,7 +1,7 @@
-import { Header } from '@/common/components/header';
-import { Main } from '@/common/components/main';
-import { PlayerBar } from '@/common/components/player-bar';
-import { Sidebar } from '@/common/components/sidebar';
+import { Header } from '@/components/header';
+import { Main } from '@/components/main';
+import { PlayerBar } from '@/components/player-bar';
+import { Sidebar } from '@/components/sidebar';
 import React, { useRef, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { MainLayoutWrapper } from './MainLayoutStyled';

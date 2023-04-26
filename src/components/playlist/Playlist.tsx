@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { PlaylistThumbnail, PlaylistWrapper } from './PlaylistStyled';
 import Card from '../card';
 import CardInfo from '../card/card-info/CardInfo';
+import { PlaylistThumbnail, PlaylistWrapper } from './PlaylistStyled';
 
 interface IPlaylistProps {}
 
@@ -18,7 +18,9 @@ const Playlist: React.FunctionComponent<IPlaylistProps> = (props) => {
 
   return (
     <PlaylistWrapper>
-      <Card />
+      <PlaylistThumbnail to="">
+        <Card />
+      </PlaylistThumbnail>
       <CardInfo {...{ item, artist }} />
     </PlaylistWrapper>
   );

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { SongListWrapper } from './SongListStyled';
-import ListItem from './components/SongItem';
+import SongItem from './components/SongItem';
 
 interface SongListProps {}
 
@@ -13,7 +13,7 @@ const SongList: React.FunctionComponent<SongListProps> = (props) => {
   return (
     <SongListWrapper className="playlist">
       {[1, 2, 3, 4].map((a) => (
-        <ListItem
+        <SongItem
           timeRelease={false}
           key={a}
           isActive={activeItem === a}

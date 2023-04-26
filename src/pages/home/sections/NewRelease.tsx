@@ -1,9 +1,9 @@
-import Section from '@/common/components/section/Section';
+import Section from '@/components/section/Section';
 import { Stack } from '@mui/material';
 import * as React from 'react';
 import { ButtonGroup, ButtonInner } from './NewReleaseStyled';
-import Column from '@/common/components/section/column/Column';
-import ListItem from '@/common/components/songlist/components/SongItem';
+import Column from '@/components/section/column/Column';
+import ListItem from '@/components/songlist/components/SongItem';
 
 interface INewReleaseProps {}
 

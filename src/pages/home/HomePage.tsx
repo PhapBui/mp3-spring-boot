@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { MainContent } from './HomePageStyled';
-import Slick from '@/common/components/carousel/Slick';
+import Slick from '@/components/carousel/Slick';
 import Recent from './sections/Recent';
 import NewRelease from './sections/NewRelease';
 
