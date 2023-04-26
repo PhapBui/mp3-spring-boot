@@ -17,6 +17,7 @@ import { FaRandom } from 'react-icons/fa';
 import { FiRepeat } from 'react-icons/fi';
 import { SlMusicToneAlt } from 'react-icons/sl';
 import { BiCheckbox, BiCheckboxChecked } from 'react-icons/bi';
+import { TbPlaylistAdd } from 'react-icons/tb';
 
 const icons = {
   desktopDownload: <VscDesktopDownload size={cssVariables.iconSize.normal} />,
@@ -31,8 +32,10 @@ const icons = {
   like: <AiOutlineHeart size={cssVariables.iconSize.normal} />,
 
   music: <SlMusicToneAlt size={cssVariables.iconSize.small} />,
-  checkBox: <BiCheckbox size={cssVariables.iconSize.small} />,
-  checkedBox: <BiCheckboxChecked size={cssVariables.iconSize.small} />,
+  checkBox: <BiCheckbox size={cssVariables.iconSize.normal} />,
+  checkedBox: <BiCheckboxChecked size={cssVariables.iconSize.normal} />,
+
+  addToPlayList: <TbPlaylistAdd size={cssVariables.iconSize.normal} />,
 
   play: <BsPlayCircle size={cssVariables.iconSize.player} />,
   pause: <BsPauseCircle size={cssVariables.iconSize.player} />,

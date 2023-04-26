@@ -160,6 +160,7 @@ export let cssVariables = {
     color: {
       primary: 'hsla(0,0%,100%,0.1)',
       secondary: ' hsla(0,0%,100%,0.05)',
+      borderBox: 'hsla(0,0%,100%,0.2)',
     },
   },
   margin: {

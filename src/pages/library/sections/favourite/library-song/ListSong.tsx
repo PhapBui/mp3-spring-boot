@@ -9,32 +9,43 @@ import {
 import { SongItemContent } from '@/components/songlist/components/SongItemStyled';
 import { CheckBoxWrapper, ListSongWrapper } from './ListSongStyled';
 import { icons } from '@/assets';
+import AddToPlaylist from '@/components/add-to-playlist';
 interface ITableProps {}
 
 const ListTable: React.FunctionComponent<ITableProps> = (props) => {
   const [activeItem, setActiveItem] = React.useState<number>(1);
+  const [show, setShow] = React.useState<Boolean>(false);
   const handleActive = (a: number) => {
     setActiveItem(a);
+  };
+
+  const toggleAddToList = () => {
+    setShow((prev) => !prev);
   };
   return (
     <ListSongWrapper>
       <SongItemContent className="song-list-header">
-        <SongItemLeft className="song-left">
-          <span
-            style={{
-              marginRight: 8,
-              visibility: 'hidden',
-              opacity: 0,
-              userSelect: 'none',
-              pointerEvents: 'none',
-            }}
-          >
-            {icons.account}
-          </span>
-          <span style={{ fontSize: 16 }} className="column-text">
-            {' '}
-            Bài hát
-          </span>
+        <SongItemLeft className="song-left" onClick={toggleAddToList}>
+          {show ? (
+            <AddToPlaylist />
+          ) : (
+            <>
+              <span
+                style={{
+                  marginRight: 8,
+                  visibility: 'hidden',
+                  opacity: 0,
+                  userSelect: 'none',
+                  pointerEvents: 'none',
+                }}
+              >
+                {icons.account}
+              </span>
+              <span style={{ fontSize: 16 }} className="column-text">
+                Bài hát
+              </span>
+            </>
+          )}
         </SongItemLeft>
         <SongItemCenter className="song-center">Album</SongItemCenter>
         <SongItemRight className="song-right">Thời gian</SongItemRight>

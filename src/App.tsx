@@ -1,6 +1,6 @@
 import { RouterProvider } from 'react-router-dom';
 import { router } from './router/router';
-import UIMenu from './common/components/UIMenu';
+// import UIMenu from './common/components/UIMenu';
 // import { useState } from 'react';
 function App() {
   // const [isShow, setIsShow] = useState<Boolean>(false);

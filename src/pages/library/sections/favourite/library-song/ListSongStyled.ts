@@ -1,8 +1,13 @@
+import { cssVariables } from '@/utilities/theme';
 import { styled } from '@mui/material';
 
 export const ListSongWrapper = styled('div')({
-  '& .song-left': {
-    flexGrow: 0,
+  '&>.song-list-header': {
+    color: cssVariables.color.textSecondary,
+
+    '& .song-left': {
+      flexGrow: 0,
+    },
   },
 });
 
