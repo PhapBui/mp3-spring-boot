@@ -25,4 +25,4 @@ const MenuItem: React.FunctionComponent<MenuItemProps> = ({
   );
 };
 
-export default MenuItem;
+export default React.memo(MenuItem);

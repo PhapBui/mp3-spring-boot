@@ -9,4 +9,4 @@ const Control: React.FunctionComponent<ControlProps> = ({ children }) => {
   return <ControlWrapper>{children}</ControlWrapper>;
 };
 
-export default Control;
+export default React.memo(Control);

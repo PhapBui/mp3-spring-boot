@@ -36,4 +36,4 @@ const CardInfo: React.FunctionComponent<ICardInfoProps> = ({
   );
 };
 
-export default CardInfo;
+export default React.memo(CardInfo);

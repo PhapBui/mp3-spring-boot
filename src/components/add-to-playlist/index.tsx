@@ -1,5 +1,4 @@
 import { icons } from '@/assets';
-import { Stack } from '@mui/material';
 import * as React from 'react';
 import { Action, AddToPlaylistWrapper, AllCheck, MoreAction } from './indexStyled';
 
@@ -18,4 +17,4 @@ const AddToPlaylist: React.FunctionComponent<IAddToPlaylistProps> = (props) => {
   );
 };
 
-export default AddToPlaylist;
+export default React.memo(AddToPlaylist);

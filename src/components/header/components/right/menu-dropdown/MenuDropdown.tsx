@@ -41,4 +41,4 @@ const MenuDropDown: React.FunctionComponent<IMenuDropDownProps> = (props) => {
   );
 };
 
-export default MenuDropDown;
+export default React.memo(MenuDropDown);

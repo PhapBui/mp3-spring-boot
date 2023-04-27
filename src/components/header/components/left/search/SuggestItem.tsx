@@ -16,4 +16,4 @@ const SuggestItem: React.FunctionComponent<SuggestItemProps> = (props) => {
   );
 };
 
-export default SuggestItem;
+export default React.memo(SuggestItem);

@@ -1,58 +1,26 @@
 import { cssVariables } from '@/utilities/theme';
 import { Divider } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import { Content, PersonasSidebar, SidebarInner, SidebarWrapper } from './SidebarStyled';
 import AddToPlaylist from './components/add-to-playlist/AddToPlaylist';
 import BrandLogo from './components/brand/BrandLogo';
 import CTA from './components/cta/CTA';
 import Menu from './components/menu-list/Menu';
 
-import { BsPlayCircle } from 'react-icons/bs';
-import { GiMusicSpell } from 'react-icons/gi';
-import { MdLibraryMusic } from 'react-icons/md';
-import { TbChartDots3 } from 'react-icons/tb';
-import { VscNotebook, VscTarget } from 'react-icons/vsc';
+import ScollBar from '@/components/scroll-bar';
+import { mainMenuData, personasMenuData, subMenuData } from '@/config/MenuSideBar';
+import { CreeateScrollProperties } from '@/utilities/scrollbar';
 interface SidebarProps {}
 
-const mainMenuData = [
-  {
-    id: 1,
-    name: 'Thư viện',
-    path: 'mymusic',
-    icon: <MdLibraryMusic />,
-    actionIcons: <BsPlayCircle />,
-  },
-  {
-    id: 2,
-    name: 'Khám phá',
-    path: '',
-    icon: <VscTarget />,
-  },
-  {
-    id: 3,
-    name: '#zingchart',
-    path: 'zing-chart',
-    icon: <TbChartDots3 />,
-    actionIcons: <BsPlayCircle />,
-  },
-  {
-    id: 4,
-    name: 'Radio',
-    path: 'radio',
-    icon: <GiMusicSpell />,
-    actionIcons: <BsPlayCircle />,
-  },
-  {
-    id: 5,
-    name: 'Theo dõi',
-    path: 'theo-doi',
-    icon: <VscNotebook />,
-    actionIcons: <BsPlayCircle />,
-  },
-];
-
 const Sidebar: React.FunctionComponent<SidebarProps> = (props) => {
+  const [height, setHeight] = useState<number>(0);
+  const [translateY, setTranslateY] = useState<number>(0);
+
   const handleScroll = (e: React.UIEvent<HTMLElement>): void => {
+    const [height, transy] = CreeateScrollProperties(e);
+    setHeight(height);
+    setTranslateY(transy <= 0 ? 0 : transy);
+
     if (e.currentTarget.scrollTop > 0) {
       e.currentTarget.classList.add('is-mark');
     } else {
@@ -68,10 +36,11 @@ const Sidebar: React.FunctionComponent<SidebarProps> = (props) => {
         <Divider sx={{ mx: 3, my: 1, borderColor: cssVariables.border.color.primary }} />
         <PersonasSidebar>
           <Content onScroll={handleScroll}>
-            <Menu data={mainMenuData} />
+            <Menu data={subMenuData} />
             <CTA />
-            <Menu data={mainMenuData} title={'Thư Viện'} />
+            <Menu data={personasMenuData} title={'Thư Viện'} />
           </Content>
+          <ScollBar height={height} translateY={translateY} />
         </PersonasSidebar>
         <AddToPlaylist />
       </SidebarInner>
@@ -79,4 +48,7 @@ const Sidebar: React.FunctionComponent<SidebarProps> = (props) => {
   );
 };
 
-export default Sidebar;
+export default React.memo(Sidebar);
+//scroll top =114
+//clientHeight =334
+//

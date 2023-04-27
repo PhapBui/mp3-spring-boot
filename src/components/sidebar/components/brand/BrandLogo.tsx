@@ -11,4 +11,4 @@ const BrandLogo: React.FunctionComponent<BrandLogoProps> = (props) => {
   );
 };
 
-export default BrandLogo;
+export default React.memo(BrandLogo);

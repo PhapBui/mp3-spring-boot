@@ -16,4 +16,4 @@ const AddToPlaylist: React.FunctionComponent<AddToPlaylistProps> = (props) => {
   );
 };
 
-export default AddToPlaylist;
+export default React.memo(AddToPlaylist);

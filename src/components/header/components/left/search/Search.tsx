@@ -1,8 +1,9 @@
-import { Box, Typography } from '@mui/material';
-import { ChangeEvent, useRef, useState, useEffect } from 'react';
+import { Typography } from '@mui/material';
+import { ChangeEvent, useRef, useState, memo } from 'react';
 
-import { CiSearch } from 'react-icons/ci';
+import useOnClickOutside from '@/hooks/onClickOutSide';
 import { cssVariables } from '@/utilities/theme';
+import { CiSearch } from 'react-icons/ci';
 import {
   Container,
   ListSuggest,
@@ -11,7 +12,6 @@ import {
   StyledInputBase,
 } from './SearchFormStyled';
 import SuggestItem from './SuggestItem';
-import useOnClickOutside from '@/hooks/onClickOutSide';
 
 interface SearchFormProps {}
 
@@ -66,4 +66,4 @@ const SearchForm: React.FunctionComponent<SearchFormProps> = () => {
   );
 };
 
-export default SearchForm;
+export default memo(SearchForm);

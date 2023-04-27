@@ -18,4 +18,4 @@ const CTA: React.FunctionComponent<CTAProps> = (props) => {
   );
 };
 
-export default CTA;
+export default React.memo(CTA);

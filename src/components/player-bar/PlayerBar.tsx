@@ -17,4 +17,4 @@ const PlayerBar: React.FunctionComponent<PlayerBarProps> = (props) => {
   );
 };
 
-export default PlayerBar;
+export default React.memo(PlayerBar);

@@ -33,4 +33,4 @@ const HeaderLeft: React.FunctionComponent<HeaderLeftProps> = (props) => {
   );
 };
 
-export default HeaderLeft;
+export default React.memo(HeaderLeft);

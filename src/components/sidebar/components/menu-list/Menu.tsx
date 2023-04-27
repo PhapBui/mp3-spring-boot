@@ -20,4 +20,4 @@ const Menu: React.FunctionComponent<MenuProps> = ({ data, title }) => {
   );
 };
 
-export default Menu;
+export default React.memo(Menu);

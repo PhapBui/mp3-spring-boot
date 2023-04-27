@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { MainContent } from './HomePageStyled';
+import { MainContent } from '@/common/style/elementStyled';
 import Slick from '@/components/carousel/Slick';
-import Recent from './sections/Recent';
+import * as React from 'react';
 import NewRelease from './sections/NewRelease';
+import Recent from './sections/Recent';
 
 interface IHomePageProps {}
 
@@ -49,4 +49,4 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
   );
 };
 
-export default HomePage;
+export default React.memo(HomePage);

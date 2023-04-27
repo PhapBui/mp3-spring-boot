@@ -2,17 +2,22 @@ import { Header } from '@/components/header';
 import { Main } from '@/components/main';
 import { PlayerBar } from '@/components/player-bar';
 import { Sidebar } from '@/components/sidebar';
-import React, { useRef, useState } from 'react';
+import { CreeateScrollProperties } from '@/utilities/scrollbar';
+import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { MainLayoutWrapper } from './MainLayoutStyled';
-import { log } from 'console';
 
 interface MainLayoutProps {}
 
 export const MainLayout: React.FunctionComponent<MainLayoutProps> = () => {
   const [isSticky, setIsStikcy] = useState<Boolean>(false);
+  const [height, setHeight] = useState<number>(0);
+  const [translateY, setTranslateY] = useState<number>(0);
 
   const handleScroll = (e: React.UIEvent<HTMLElement>): void => {
+    const [height, transy] = CreeateScrollProperties(e);
+    setHeight(height);
+    setTranslateY(transy <= 0 ? 0 : transy);
     setIsStikcy(e.currentTarget.scrollTop > 0);
   };
 
@@ -20,7 +25,7 @@ export const MainLayout: React.FunctionComponent<MainLayoutProps> = () => {
     <MainLayoutWrapper>
       <Header isSticky={isSticky} />
       <Sidebar />
-      <Main onScoll={handleScroll}>
+      <Main onScoll={handleScroll} height={height} translateY={translateY}>
         <Outlet />
       </Main>
       <PlayerBar />

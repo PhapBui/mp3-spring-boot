@@ -1,9 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
-import { Authors, Content, ItemWrapper, Thumbnail } from './ColumnStyled';
-import ActionOverlay from '../../card/overlay/ActionOverlay';
-import Card from '../../card';
-import CardInfo from '../../card/card-info/CardInfo';
+import { ItemWrapper } from './ColumnStyled';
 
 interface ISectionItemProps {
   numberColumn?: number;
@@ -27,4 +23,4 @@ const SectionItem: React.FunctionComponent<ISectionItemProps> = ({
   );
 };
 
-export default SectionItem;
+export default React.memo(SectionItem);

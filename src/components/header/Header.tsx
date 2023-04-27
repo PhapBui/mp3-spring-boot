@@ -18,4 +18,4 @@ const Header: React.FunctionComponent<HeaderProps> = ({ isSticky }: HeaderProps)
   );
 };
 
-export default Header;
+export default React.memo(Header);

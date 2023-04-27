@@ -121,6 +121,7 @@ export let cssVariables = {
     tabActiveBg: 'hsla(0,0%,100%,0.3)',
     loadingBg: 'hsla(0,0%,100%,0.1)',
     selectBg: 'hsla(0,0%,100%,0.15)',
+    scrollThumbBg: 'hsla(0,0%,100%,0.3)',
 
     gradientLatestSectionArtist:
       'linear-gradient(286.07deg,rgba(23,15,35,0.95) 55.21%,rgba(23,15,35,0.6))',

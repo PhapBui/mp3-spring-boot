@@ -24,4 +24,4 @@ const ActionOverlay: React.FunctionComponent<IActionOverlayProps> = (props) => {
   );
 };
 
-export default ActionOverlay;
+export default React.memo(ActionOverlay);

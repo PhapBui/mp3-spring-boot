@@ -33,4 +33,4 @@ const SectionHeader: React.FunctionComponent<ISectionHeaderProps> = ({
   );
 };
 
-export default SectionHeader;
+export default React.memo(SectionHeader);

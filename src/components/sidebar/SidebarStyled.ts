@@ -21,7 +21,7 @@ export const Content = styled('div')({
   position: 'absolute',
   inset: '0px',
   overflow: 'hidden scroll',
-  marginRight: '-6px',
+  marginRight: '0px',
   marginBottom: '0px',
 
   '&.is-mark': {

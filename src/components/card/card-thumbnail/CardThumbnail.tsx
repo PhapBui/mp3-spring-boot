@@ -19,4 +19,4 @@ const CardThumbnail: React.FunctionComponent<ICardProps> = ({
   );
 };
 
-export default CardThumbnail;
+export default React.memo(CardThumbnail);

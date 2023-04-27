@@ -1,7 +1,5 @@
-import { Stack } from '@mui/material';
 import * as React from 'react';
 import { SectionInner, SectionWrapper } from './SectionStyled';
-import SectionItem from './column/Column';
 import SectionHeader from './section-header/SectionHeader';
 
 interface ISectionProps {
@@ -87,4 +85,4 @@ const Section: React.FunctionComponent<ISectionProps> = ({
   );
 };
 
-export default Section;
+export default React.memo(Section);

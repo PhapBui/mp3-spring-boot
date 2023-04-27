@@ -51,7 +51,7 @@ const ListTable: React.FunctionComponent<ITableProps> = (props) => {
         <SongItemRight className="song-right">Thời gian</SongItemRight>
       </SongItemContent>
       {[1, 2, 3, 4].map((a) => (
-        <SongRow isSelected={activeItem === a}>
+        <SongRow isSelected={activeItem === a} key={a}>
           <CheckBoxWrapper className="checkbox-wrapper">
             <label className="checkbox">
               <input type="checkbox" />

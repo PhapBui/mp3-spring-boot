@@ -60,4 +60,4 @@ const PlayerQueue: React.FunctionComponent<PlayerQueueProps> = (props) => {
   );
 };
 
-export default PlayerQueue;
+export default React.memo(PlayerQueue);

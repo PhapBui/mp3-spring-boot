@@ -20,4 +20,4 @@ const Settings: React.FunctionComponent<ISettingsProps> = (props) => {
   );
 };
 
-export default Settings;
+export default React.memo(Settings);

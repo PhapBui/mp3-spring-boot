@@ -22,4 +22,4 @@ const HeaderRight: React.FunctionComponent<HeaderRightProps> = (props) => {
   );
 };
 
-export default HeaderRight;
+export default React.memo(HeaderRight);

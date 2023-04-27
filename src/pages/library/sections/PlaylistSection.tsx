@@ -4,6 +4,7 @@ import { Stack } from '@mui/material';
 import Column from '@/components/section/column/Column';
 import Playlist from '@/components/playlist/Playlist';
 interface IPlaylistSectionProps {}
+//delete
 const data = [
   {
     id: 1,
@@ -71,4 +72,4 @@ const PlaylistSection: React.FunctionComponent<IPlaylistSectionProps> = (props) 
   );
 };
 
-export default PlaylistSection;
+export default React.memo(PlaylistSection);

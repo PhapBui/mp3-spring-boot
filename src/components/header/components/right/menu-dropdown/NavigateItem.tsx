@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Action, Icon, Inner, InnerText, LinkNavigate, MenuItemWrapper } from './MenuItemStyled';
+import { Action, Icon, InnerText, LinkNavigate, MenuItemWrapper } from './MenuItemStyled';
 
 export interface NavigateItemProps {
   id: number;
@@ -25,4 +25,4 @@ const NavigateItem: React.FunctionComponent<NavigateItemProps> = ({
   );
 };
 
-export default NavigateItem;
+export default React.memo(NavigateItem);

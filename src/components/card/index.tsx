@@ -12,7 +12,7 @@ const thumbnailUrl =
 const Card: React.FunctionComponent<ICardProps> = ({ classList }: ICardProps) => {
   return (
     <div>
-      <Link to="">
+      <Link to="/kham-pha">
         <Box sx={{ position: 'relative', overflow: 'hidden', borderRadius: '4px' }}>
           <CardThumbnail thumbnailUrl={thumbnailUrl} title="After School" classList={classList} />
           <ActionOverlay />
@@ -22,4 +22,4 @@ const Card: React.FunctionComponent<ICardProps> = ({ classList }: ICardProps) =>
   );
 };
 
-export default Card;
+export default React.memo(Card);

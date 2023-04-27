@@ -18,7 +18,7 @@ const Playlist: React.FunctionComponent<IPlaylistProps> = (props) => {
 
   return (
     <PlaylistWrapper>
-      <PlaylistThumbnail to="">
+      <PlaylistThumbnail>
         <Card />
       </PlaylistThumbnail>
       <CardInfo {...{ item, artist }} />

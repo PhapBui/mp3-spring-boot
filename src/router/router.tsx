@@ -1,5 +1,5 @@
 import { MainLayout } from '@/layouts';
-import { HomePage, LibraryPage } from '@/pages';
+import { HomePage, LibraryPage, NewMusicPage } from '@/pages';
 import Hide from '@/pages/hideparent';
 import NotFound from '@/pages/notfound';
 import { createBrowserRouter } from 'react-router-dom';
@@ -17,12 +17,12 @@ const router = createBrowserRouter([
         element: <LibraryPage />,
         children: [{ path: 'songs' }, { path: 'albums' }],
       },
+      {
+        path: 'new',
+        element: <NewMusicPage />,
+        children: [{ path: 'hide', element: <Hide /> }],
+      },
     ],
-  },
-  {
-    path: 'kham-pha',
-    element: <MainLayout />,
-    children: [{ path: 'hide', element: <Hide /> }],
   },
 ]);
 
